@@ -52,6 +52,8 @@
           
           @endforeach
           <p><a href="/login">Login</a> as a seller</p>
+
+          
           
     </div>
 @endsection

@@ -8,6 +8,7 @@ use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\UmkmController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
@@ -99,5 +100,7 @@ Route::post ('/logout', [LoginController::class, 'logout']);
 
 
 Route::resource('/dashboard/product', ProductController::class)->middleware('auth');
+Route::post('/make-payment', [PaymentController::class, 'makePayment']);
+
 
 
